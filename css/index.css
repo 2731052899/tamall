@@ -1,0 +1,254 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 1931478 */
+  src: url('//at.alicdn.com/t/font_1931478_jctcria57r.eot');
+  src: url('//at.alicdn.com/t/font_1931478_jctcria57r.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1931478_jctcria57r.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1931478_jctcria57r.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1931478_jctcria57r.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1931478_jctcria57r.svg#iconfont') format('svg');
+}
+html,body{
+	min-width: 1010px;
+}
+ul li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* 导航 */
+.nav {
+	color: #999;
+	height: 32px;
+	/* position: relative; */
+	font: 12px tahoma, arial, "\5b8b\4f53";
+	font-weight: 400;
+	background-color: rgb(242, 242, 242);
+	line-height: 32px;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.nav .left {
+	margin-right: 290px;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.nav .right {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.login {
+	padding: 0 10px 0 20px;
+}
+
+.register {
+	padding: 0 10px;
+}
+
+.nav li {
+	position: relative;
+
+}
+
+.nav a {
+	color: #999;
+}
+
+.nav_menu {
+	padding: 0 14px 0 10px;
+}
+
+.nav_menu+b,.nav_menu a+b {
+	position: absolute;
+	right: 6px;
+	top: 14px;
+	width: 0;
+	height: 0;
+	border-width: 3px;
+	border-style: solid dashed dashed;
+	border-color: #bbb transparent transparent;
+	font-size: 0;
+	line-height: 0;
+}
+
+.nav_cart_link,.nav_phone_link {
+	padding: 0 10px;
+}
+.nav .right i{
+	font-size: 12px;
+	color: red;
+}
+
+.shu {
+	display: inline-block;
+	width: 0;
+	height: 14px;
+	line-height: 14px;
+	vertical-align: top;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	font-size: 0;
+	border-left: 1px solid #ccc;
+	margin: 0 2px 0 5px;
+}
+.nav a:hover{
+	color: #FF0000;
+	text-decoration: underline;
+}
+
+/* 搜索 */
+.search{
+	width: 100%;
+	height: 130px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* border: 1px solid beige; */
+}
+.search .s_input{
+	width: 276px;
+	height: 36px;
+	padding: 5px 3px 5px 5px;
+	border: 2px solid red;
+}
+.search .s_btn{
+	width: 132px;
+	height: 36px;
+	padding: 5px 3px 5px 5px;
+	background-color: red;
+	border: 2px solid red;
+	letter-spacing:5px;
+	color: white;
+	font-size: 18px;
+	font-family:微软雅黑, arial, 宋体;
+	font-weight:700;
+	line-height: 27px;
+}
+
+/* tab */
+.tabar{
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.tabar .left{
+	width: 290px;
+	height: 535px;
+	/* background-color: pink; */
+	z-index: 20;
+	transform: translate3d(45px,-124px,0);
+	transform: translate();
+	display: flex;
+	flex-direction: column;
+}
+
+.tabar .left li{
+	
+	height: 31.19px;
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	height: 45px;
+	background-color:rgba(0, 0, 0, 0.55)
+}
+.tabar .left .fig{
+	width: 290px;
+	height: 130px;
+	margin-bottom: -1px;
+	background-color: #fff;	
+}
+.tabar .left .fenlei {
+	width: 200px;
+	margin-left: 45px;
+	height: 31.19px;
+}
+
+
+.tabar .left .top i{
+	color: white;
+}
+.tabar .left .fenlei a{
+	height: 31px;
+	color: white;
+	font-family:"Microsoft YaHei", SimSun, 宋体, sans-serif;
+	font-size: 14px;
+	color: white;
+	font-weight:400;
+	line-height: 31px;
+}
+.tabar .left .top a{
+	font-size: 16px;
+	font-weight:700;
+
+}
+.tabar .left .top {
+	background-color: red;
+	height: 50px;
+	
+}
+.tabar .left li i{
+	margin: 0 4px 0 14px;
+}
+.tabar .right{
+	width: 820px;
+	height: 35px;
+	background-color: white;
+	z-index: 20;
+	display: flex;
+	line-height: 35px;
+}
+.tabar .right li{
+	padding: 0 8px;
+}
+.t_hidden{
+		display: none;
+}
+.tabar .right .t_img img{
+	width: 100px;
+	height: 30px;
+	margin-top: 3px;
+}
+.tabar:before{
+	width: 100%;
+	height: 500px;
+	/* background-color:gray; */
+	background-image: url("../img/TB1_JXrLVXXXXbZXVXXSutbFXXX.jpg");
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 35px;
+	z-index: 10;
+}
+.tabar .right .t_select a:hover{
+	color: #FF0000;
+}
+@media (min-width:1284px) {
+	/* 导航条设置 */
+	.nav .left{
+		margin-right: 560px;
+	}
+	.search .s_input{
+		width: 491px;
+	}
+	.tabar .right{
+		width: 1100px;
+	}
+	.t_hidden{
+		display: block;
+	}
+}
+
+
