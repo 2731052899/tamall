@@ -195,17 +195,18 @@ function animate(obj,attrObj,duration,fn,callback){
     var fn = fn || Tween.Linear;
 
     for(var i in attrObj){
-        start[i] = parseInt(getComputedStyle(obj,null)[i]);
+        start[i] = css(obj,i);
         change[i] = attrObj[i] - start[i];
+        
     }
     obj.t = setInterval(function(){
         time += 50;
-        for(var i in attrObj){
-            obj.style[i] = fn(time,start[i],change[i],duration) + "px"
+        for(let i in attrObj){
+            css(obj,i,fn(time,start[i],change[i],duration))
         }
         if(time >= duration){
             for(var i in attrObj){
-                obj.style[i] = attrObj[i] + "px"
+                css(obj,i,attrObj[i])
             }
             clearInterval(obj.t);
             if(callback){
@@ -213,4 +214,39 @@ function animate(obj,attrObj,duration,fn,callback){
             }
         }
     },50)
+}
+function css(obj, attr, val) {
+    if (arguments.length == 2) {
+        switch (attr) {
+            case "background":
+            case "color":
+            case "border":
+            case "opacity":
+                return getComputedStyle(obj, null)[attr];
+                
+            break
+            case "scrollTop":
+                return obj[attr];
+                break;
+
+
+            default:
+                return parseInt(getComputedStyle(obj, null)[attr]);
+        }
+    } else if (arguments.length == 3) {
+        switch (attr) {
+            case "background":
+            case "color":
+            case "opacity":
+            case "border":
+
+                obj.style[attr] = val;
+                break
+            
+            case "scrollTop":
+                obj[attr] = val - 50;
+            default:
+                obj.style[attr] = val + "px";
+        }
+    }
 }
